@@ -1,10 +1,16 @@
 import express from "express";
 import fs from "fs";
 import "dotenv/config";
+import cors from "cors";
 
 const app = express();
 const PORT = process.env.PORT || 4000;
 app.use(express.json());
+
+app.use(cors({
+    origin: "http://localhost:5173",
+    credentials: true,
+}))
 
 app.post("/submit", (req, res) => {
   const newData = req.body;

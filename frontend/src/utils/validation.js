@@ -4,7 +4,7 @@ export const validateForm = (formData) => {
 
     // Name validation
     if (!formData.name || formData.name.trim().length < 2) {
-        errors.name = "Name must be at least 2 characters long";
+        errors.name = "Please enter a valid name";
     }
 
     // Email validation

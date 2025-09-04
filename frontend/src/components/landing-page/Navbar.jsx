@@ -32,9 +32,9 @@ const Navbar = () => {
     const renderNavItem = (item) => {
         if (item.isButton) {
             return (
-                <button 
+                <button
                     key={item.label}
-                    onClick={() => scrollToSection(item.id)} 
+                    onClick={() => scrollToSection(item.id)}
                     className={navbarStyles.navButton}
                     style={navbarStyles.navButtonStyle}
                     onMouseEnter={(e) => {
@@ -50,9 +50,9 @@ const Navbar = () => {
         }
 
         return (
-            <button 
+            <button
                 key={item.label}
-                onClick={() => scrollToSection(item.id)} 
+                onClick={() => scrollToSection(item.id)}
                 className={navbarStyles.navLink}
                 style={navbarStyles.navLinkStyle}
                 onMouseEnter={(e) => {
@@ -63,7 +63,7 @@ const Navbar = () => {
                 }}
             >
                 {item.label}
-                <span 
+                <span
                     className={navbarStyles.navUnderline}
                     style={navbarStyles.navUnderlineStyle}
                 ></span>
@@ -72,49 +72,49 @@ const Navbar = () => {
     };
 
     return (
-        <nav 
+        <nav
             className={navbarStyles.nav}
             style={navbarStyles.getNavStyle(scrolled)}
         >
             {/* Logo */}
             <div className={navbarStyles.logo}>
-                <Car 
-                    className={navbarStyles.logoIcon} 
+                <Car
+                    className={navbarStyles.logoIcon}
                     style={navbarStyles.logoIconStyle}
                 />
-                <span 
+                <span
                     className={navbarStyles.logoText}
                     style={navbarStyles.logoTextStyle}
                 >
                     CarSale
                 </span>
             </div>
-            
+
             {/* Desktop Navigation */}
             <div className={navbarStyles.desktopNav}>
                 {navItems.map(renderNavItem)}
             </div>
 
             {/* Mobile Menu Button */}
-            <button 
+            <button
                 className={navbarStyles.mobileMenuButton}
                 onClick={() => setSidebarOpen(!sidebarOpen)}
                 aria-label="Toggle menu"
             >
-                <Menu 
-                    className={navbarStyles.mobileMenuIcon} 
+                <Menu
+                    className={navbarStyles.mobileMenuIcon}
                     style={navbarStyles.mobileMenuIconStyle}
                 />
             </button>
 
             {/* Mobile Sidebar */}
-            <div 
-                className={navbarStyles.mobileSidebarOverlay(sidebarOpen)} 
+            <div
+                className={navbarStyles.mobileSidebarOverlay(sidebarOpen)}
                 style={navbarStyles.mobileSidebarOverlayStyle}
                 onClick={() => setSidebarOpen(false)}
             >
-                <div 
-                    className={navbarStyles.mobileSidebar(sidebarOpen)} 
+                <div
+                    className={navbarStyles.mobileSidebar(sidebarOpen)}
                     style={navbarStyles.mobileSidebarStyle}
                     onClick={(e) => e.stopPropagation()}
                 >
@@ -122,35 +122,35 @@ const Navbar = () => {
                         {/* Mobile Header */}
                         <div className={navbarStyles.mobileHeader}>
                             <div className={navbarStyles.mobileLogo}>
-                                <Car 
-                                    className={navbarStyles.mobileLogoIcon} 
+                                <Car
+                                    className={navbarStyles.mobileLogoIcon}
                                     style={navbarStyles.mobileLogoIconStyle}
                                 />
-                                <span 
+                                <span
                                     className={navbarStyles.mobileLogoText}
                                     style={navbarStyles.mobileLogoTextStyle}
                                 >
                                     CarSale
                                 </span>
                             </div>
-                            <button 
+                            <button
                                 className={navbarStyles.mobileCloseButton}
                                 onClick={() => setSidebarOpen(false)}
                                 aria-label="Close menu"
                             >
-                                <X 
-                                    className={navbarStyles.mobileCloseIcon} 
+                                <X
+                                    className={navbarStyles.mobileCloseIcon}
                                     style={navbarStyles.mobileCloseIconStyle}
                                 />
                             </button>
                         </div>
-                        
+
                         {/* Mobile Navigation Items */}
                         <div className={navbarStyles.mobileNavItems}>
                             {navItems.map((item) => (
-                                <button 
+                                <button
                                     key={item.label}
-                                    onClick={() => scrollToSection(item.id)} 
+                                    onClick={() => scrollToSection(item.id)}
                                     className={navbarStyles.mobileNavItem}
                                     style={navbarStyles.getMobileNavItemStyle(item.isButton)}
                                     onMouseEnter={(e) => {

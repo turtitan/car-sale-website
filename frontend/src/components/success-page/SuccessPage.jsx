@@ -31,11 +31,11 @@ const SuccessPage = ({ setCurrentPage }) => {
                 <div className={animateContent ? combinedStyles.cardAnimated : combinedStyles.cardHidden}>
                     {/* Success Icon */}
                     <div className={successStyles.iconSection}>
-                        <div 
+                        <div
                             className={animateContent ? combinedStyles.iconContainerAnimated : combinedStyles.iconContainerHidden}
                             style={colorStyles.iconContainerBg}
                         >
-                            <CheckCircle 
+                            <CheckCircle
                                 className={iconStyles.success}
                                 style={colorStyles.iconSuccess}
                             />
@@ -44,14 +44,14 @@ const SuccessPage = ({ setCurrentPage }) => {
 
                     {/* Success Message */}
                     <div className={animateContent ? combinedStyles.messageSectionAnimated : combinedStyles.messageSectionHidden}>
-                        <h1 
+                        <h1
                             className={typographyStyles.h1}
                             style={colorStyles.headingLight}
                         >
                             Registration Successful!
                         </h1>
-                        
-                        <p 
+
+                        <p
                             className={typographyStyles.paragraph}
                             style={colorStyles.bodyLight}
                         >
@@ -60,29 +60,29 @@ const SuccessPage = ({ setCurrentPage }) => {
                     </div>
 
                     {/* Additional Info */}
-                    <div 
+                    <div
                         className={animateContent ? combinedStyles.infoSectionAnimated : combinedStyles.infoSectionHidden}
                         style={colorStyles.infoBackground}
                     >
                         <div className={infoStyles.header}>
-                            <Car 
+                            <Car
                                 className={iconStyles.car}
                                 style={colorStyles.iconInfo}
                             />
-                            <h3 
+                            <h3
                                 className={infoStyles.title}
                                 style={colorStyles.infoTitle}
                             >
                                 What's Next?
                             </h3>
                         </div>
-                        <ul 
+                        <ul
                             className={infoStyles.list}
                             style={colorStyles.infoText}
                         >
                             {nextSteps.map((step, index) => (
                                 <li key={index} className={infoStyles.listItem}>
-                                    <span 
+                                    <span
                                         className={infoStyles.bullet}
                                         style={colorStyles.infoBullet}
                                     >•</span>
@@ -102,14 +102,6 @@ const SuccessPage = ({ setCurrentPage }) => {
                             <ArrowLeft className={iconStyles.arrow} />
                             Back to Home
                         </button>
-                        
-                        <button
-                            onClick={() => window.open("mailto:support@carsale.com", "_blank")}
-                            className={buttonStyles.secondary}
-                            style={colorStyles.buttonSecondary}
-                        >
-                            Contact Support
-                        </button>
                     </div>
 
                     {/* Footer Note */}
@@ -124,4 +116,4 @@ const SuccessPage = ({ setCurrentPage }) => {
     );
 };
 
-export default SuccessPage; 
+export default SuccessPage;

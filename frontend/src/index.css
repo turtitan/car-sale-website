@@ -4,10 +4,13 @@
 * {
   font-family: "Poppins", sans-serif;
   font-weight: 500;
+  overflow-x: clip;
 }
 
 html {
   scroll-behavior: smooth;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 /* CSS Custom Properties will be injected dynamically from color.js */
