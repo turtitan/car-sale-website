@@ -31,7 +31,7 @@ src/
 │       ├── SuccessPage.jsx       # Success page
 │       └── styles.js             # Success page styles
 ├── constants/
-│   └── index.js                  # Static data
+│   └── color.js                  # Common color stored
 ├── utils/
 │   └── validation.js            # Validation functions
 └── App.jsx                      # Main app

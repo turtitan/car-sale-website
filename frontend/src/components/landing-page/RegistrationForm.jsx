@@ -2,7 +2,7 @@ import { useState } from "react";
 import { AlertCircle } from "lucide-react";
 import { validateForm } from "../../utils/validation";
 import { registrationFormStyles } from "./styles";
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 
 const RegistrationForm = ({ onSubmit }) => {
     const [formData, setFormData] = useState({
@@ -21,7 +21,6 @@ const RegistrationForm = ({ onSubmit }) => {
             [name]: value
         }));
 
-        // Clear error when user starts typing
         if (errors[name]) {
             setErrors(prev => ({
                 ...prev,
@@ -33,7 +32,6 @@ const RegistrationForm = ({ onSubmit }) => {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        // Clear previous errors
         setErrors({});
         setSubmitError("");
 
@@ -47,10 +45,8 @@ const RegistrationForm = ({ onSubmit }) => {
         setIsSubmitting(true);
 
         try {
-            // Simulate form submission delay
             await new Promise(resolve => setTimeout(resolve, 1500));
 
-            // Try to make API call with proper headers and error handling
             try {
                 const response = await fetch("http://localhost:4000/submit", {
                     method: "POST",
@@ -66,10 +62,8 @@ const RegistrationForm = ({ onSubmit }) => {
 
                 await response.json();
             } catch (apiError) {
-                // If API call fails, simulate success for demo purposes
                 console.log('API not available, simulating success:', apiError);
             }
-            // Call the parent's onSubmit function on success
             onSubmit(formData);
         } catch (error) {
             console.error('Form submission error:', error);
@@ -98,7 +92,6 @@ const RegistrationForm = ({ onSubmit }) => {
                 >
                     <form onSubmit={handleSubmit} className={registrationFormStyles.formContainer}>
                         <div className={registrationFormStyles.formFields}>
-                            {/* Name Field */}
                             <div>
                                 <label htmlFor="name" className={registrationFormStyles.label}>
                                     Full Name *
@@ -120,7 +113,6 @@ const RegistrationForm = ({ onSubmit }) => {
                                 )}
                             </div>
 
-                            {/* Email Field */}
                             <div>
                                 <label htmlFor="email" className={registrationFormStyles.label}>
                                     Email Address *
@@ -142,7 +134,6 @@ const RegistrationForm = ({ onSubmit }) => {
                                 )}
                             </div>
 
-                            {/* Phone Field */}
                             <div>
                                 <label htmlFor="phone" className={registrationFormStyles.label}>
                                     Phone Number *
@@ -164,7 +155,6 @@ const RegistrationForm = ({ onSubmit }) => {
                                 )}
                             </div>
 
-                            {/* Submit Error Display */}
                             {submitError && (
                                 <div className={registrationFormStyles.submitErrorContainer}>
                                     <AlertCircle className={registrationFormStyles.errorIcon} />
@@ -172,7 +162,6 @@ const RegistrationForm = ({ onSubmit }) => {
                                 </div>
                             )}
 
-                            {/* Submit Button */}
                             <button
                                 type="submit"
                                 disabled={isSubmitting}

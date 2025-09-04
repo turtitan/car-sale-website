@@ -29,7 +29,6 @@ const SuccessPage = ({ setCurrentPage }) => {
         <div className={layoutStyles.container}>
             <div className={layoutStyles.content}>
                 <div className={animateContent ? combinedStyles.cardAnimated : combinedStyles.cardHidden}>
-                    {/* Success Icon */}
                     <div className={successStyles.iconSection}>
                         <div
                             className={animateContent ? combinedStyles.iconContainerAnimated : combinedStyles.iconContainerHidden}
@@ -42,7 +41,6 @@ const SuccessPage = ({ setCurrentPage }) => {
                         </div>
                     </div>
 
-                    {/* Success Message */}
                     <div className={animateContent ? combinedStyles.messageSectionAnimated : combinedStyles.messageSectionHidden}>
                         <h1
                             className={typographyStyles.h1}
@@ -59,7 +57,6 @@ const SuccessPage = ({ setCurrentPage }) => {
                         </p>
                     </div>
 
-                    {/* Additional Info */}
                     <div
                         className={animateContent ? combinedStyles.infoSectionAnimated : combinedStyles.infoSectionHidden}
                         style={colorStyles.infoBackground}
@@ -92,7 +89,6 @@ const SuccessPage = ({ setCurrentPage }) => {
                         </ul>
                     </div>
 
-                    {/* Action Buttons */}
                     <div className={animateContent ? combinedStyles.actionSectionAnimated : combinedStyles.actionSectionHidden}>
                         <button
                             onClick={() => setCurrentPage("home")}
@@ -104,7 +100,6 @@ const SuccessPage = ({ setCurrentPage }) => {
                         </button>
                     </div>
 
-                    {/* Footer Note */}
                     <div className={animateContent ? combinedStyles.footerSectionAnimated : combinedStyles.footerSectionHidden}>
                         <p className={typographyStyles.small}>
                             Questions? Email us at support@carsale.com or call (555) 123-4567

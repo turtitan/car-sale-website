@@ -90,12 +90,10 @@ const Navbar = () => {
                 </span>
             </div>
 
-            {/* Desktop Navigation */}
             <div className={navbarStyles.desktopNav}>
                 {navItems.map(renderNavItem)}
             </div>
 
-            {/* Mobile Menu Button */}
             <button
                 className={navbarStyles.mobileMenuButton}
                 onClick={() => setSidebarOpen(!sidebarOpen)}
@@ -107,7 +105,6 @@ const Navbar = () => {
                 />
             </button>
 
-            {/* Mobile Sidebar */}
             <div
                 className={navbarStyles.mobileSidebarOverlay(sidebarOpen)}
                 style={navbarStyles.mobileSidebarOverlayStyle}
@@ -145,7 +142,6 @@ const Navbar = () => {
                             </button>
                         </div>
 
-                        {/* Mobile Navigation Items */}
                         <div className={navbarStyles.mobileNavItems}>
                             {navItems.map((item) => (
                                 <button

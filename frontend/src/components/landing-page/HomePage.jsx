@@ -41,7 +41,6 @@ const HomePage = ({ setCurrentPage }) => {
         },
     ]
 
-    // Animation triggers
     useEffect(() => {
         setAnimateHero(true);
         const timer = setTimeout(() => setAnimateFeatures(true), 500);
@@ -49,13 +48,11 @@ const HomePage = ({ setCurrentPage }) => {
     }, []);
 
     const handleFormSubmit = () => {
-        // Navigate to success page
         setCurrentPage("success");
     };
 
     return (
         <div className={layoutStyles.container}>
-            {/* Hero Section */}
             <section id="headline" className={heroStyles.section}>
                 <div className={heroStyles.background} style={heroStyles.backgroundStyle}></div>
                 <div className={layoutStyles.heroContainer}>
@@ -176,7 +173,6 @@ const HomePage = ({ setCurrentPage }) => {
                 </div>
             </section>
 
-            {/* Registration Form Section */}
             <RegistrationForm onSubmit={handleFormSubmit} />
         </div>
     );
